@@ -8,12 +8,6 @@ import { Navbar } from "@/components/Navbar";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-// Static image imports for automatic blur placeholder and zero CLS
-import ossImg from "@/public/WORKS/oss.png";
-import legendImg from "@/public/WORKS/legend.png";
-import greenImg from "@/public/WORKS/green.png";
-import fiyinImg from "@/public/WORKS/fiyin.png";
-
 const projects = [
   {
     name: "OSS Multimedia",
@@ -22,7 +16,7 @@ const projects = [
     impact: "Created a cinematic online presence for a premium media production company.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://oss-multimedia.vercel.app/",
-    image: ossImg,
+    image: "/WORKS/oss.png",
   },
   {
     name: "Legend Beauty Store",
@@ -31,7 +25,7 @@ const projects = [
     impact: "Built a conversion-optimized storefront streamlining product discovery for beauty shoppers.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://legend-beauty-store.vercel.app/",
-    image: legendImg,
+    image: "/WORKS/legend.png",
   },
   {
     name: "Green Minds",
@@ -40,7 +34,7 @@ const projects = [
     impact: "Improved trust and visibility for an environmental NGO through modern web design.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://green-minds-theta.vercel.app/",
-    image: greenImg,
+    image: "/WORKS/green.png",
   },
   {
     name: "Fiyin's Closet & Events",
@@ -49,7 +43,7 @@ const projects = [
     impact: "Created a premium booking and showcase platform elevating the luxury brand presence.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://fiyins-closet-site.vercel.app/",
-    image: fiyinImg,
+    image: "/WORKS/fiyin.png",
   },
 ] as const;
 
