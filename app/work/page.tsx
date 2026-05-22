@@ -105,8 +105,9 @@ export default function WorkPage() {
                     src={project.image} 
                     alt={`${project.name} Preview`}
                     fill
+                    priority={i === 0}
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent" />
                 </div>
