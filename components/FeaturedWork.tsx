@@ -4,7 +4,30 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
+
+function ProjectImage({ src, alt, priority }: { src: string; alt: string; priority?: boolean }) {
+  const [errored, setErrored] = useState(false);
+  if (errored) {
+    return (
+      <div className="absolute inset-0 flex items-center justify-center bg-surface/60">
+        <span className="text-xs font-medium text-muted opacity-60">Preview unavailable</span>
+      </div>
+    );
+  }
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      priority={priority}
+      className="object-cover transition-transform duration-700 group-hover:scale-105"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+      onError={() => setErrored(true)}
+    />
+  );
+}
 
 const projects = [
   {
@@ -104,14 +127,11 @@ export function FeaturedWork() {
                 {/* Internal Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none z-0" />
                 
-                <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted/20 border-b border-border/50">
-                  <Image 
-                    src={project.image} 
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface/20 border-b border-border/50">
+                  <ProjectImage
+                    src={project.image}
                     alt={`${project.name} Preview`}
-                    fill
                     priority={i === 0}
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent" />
                 </div>
