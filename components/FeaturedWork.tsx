@@ -14,6 +14,7 @@ const projects = [
     impact: "Created a cinematic online presence for a premium media production company.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://oss-multimedia.vercel.app/",
+    slug: "/work/oss-multimedia",
     image: "/WORKS/oss.png",
   },
   {
@@ -23,6 +24,7 @@ const projects = [
     impact: "Built a conversion-optimized storefront streamlining product discovery for beauty shoppers.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://legend-beauty-store.vercel.app/",
+    slug: "/work/legend-beauty",
     image: "/WORKS/legend.png",
   },
   {
@@ -32,6 +34,7 @@ const projects = [
     impact: "Improved trust and visibility for an environmental NGO through modern web design.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://green-minds-theta.vercel.app/",
+    slug: "/work/green-minds",
     image: "/WORKS/green.png",
   },
   {
@@ -41,6 +44,7 @@ const projects = [
     impact: "Created a premium booking and showcase platform elevating the luxury brand presence.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://fiyins-closet-site.vercel.app/",
+    slug: "/work/fiyin-closet",
     image: "/WORKS/fiyin.png",
   },
 ] as const;
@@ -143,15 +147,21 @@ export function FeaturedWork() {
                     ))}
                   </div>
 
-                  <div className="mt-auto pt-4">
+                  <div className="mt-auto pt-4 flex flex-wrap gap-3">
+                    <Link
+                      href={project.slug}
+                      className="group/btn inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:opacity-90 hover:shadow-glow w-full sm:w-auto"
+                    >
+                      Read Case Study
+                    </Link>
                     <a 
                       href={project.href} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="group/btn inline-flex items-center justify-center gap-2 rounded-xl bg-primary/10 border border-primary/20 px-6 py-3 text-sm font-bold text-primary transition-all duration-300 hover:bg-primary hover:text-white w-full sm:w-auto hover:shadow-glow"
+                      className="group/btn inline-flex items-center justify-center gap-2 rounded-xl bg-surface/50 border border-border px-5 py-2.5 text-sm font-bold text-muted transition-all duration-300 hover:border-primary/20 hover:text-white w-full sm:w-auto"
                     >
-                      Visit Live Site
-                      <ExternalLink className="h-4 w-4 transition-transform group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" aria-hidden />
+                      Live Site
+                      <ExternalLink className="h-4 w-4" aria-hidden />
                     </a>
                   </div>
                 </div>

@@ -33,7 +33,7 @@ export function PremiumCta() {
               Ready to build the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-glow">future?</span>
             </h2>
             <p className="mt-6 max-w-2xl mx-auto text-xl text-muted/90 font-medium">
-              Send your project details and Izzy Studios will help shape the fastest practical path to launch.
+              Send your project details and Izzy Digital Studio will help shape the fastest practical path to launch.
             </p>
             
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

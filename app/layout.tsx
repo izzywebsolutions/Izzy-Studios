@@ -11,26 +11,40 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Izzy Digital Studio | Premium Web & AI Automation Agency in Nigeria",
+    default: "Izzy Digital Studio | Web Design, AI Automation & SaaS Development Agency",
     template: "%s | Izzy Digital Studio",
   },
   description:
-    "Izzy Digital Studio is a world-class digital systems studio based in Lagos, Nigeria. We build high-performance SaaS platforms, business websites, and AI automation workflows.",
-  keywords: ["web design Nigeria", "AI agency Nigeria", "automation agency Lagos", "web development Lagos", "SaaS development Nigeria", "digital systems studio", "Izzy Digital Studio", "Izzy Web Solutions"],
+    "Izzy Digital Studio is a premium web design, AI systems, automation, and SaaS development agency serving Lagos and global clients with business-focused digital workflows.",
+  keywords: [
+    "Izzy Digital Studio",
+    "Izzy Studios",
+    "web design Lagos",
+    "AI automation Nigeria",
+    "web developer Ikorodu",
+    "web design agency",
+    "SaaS development company",
+    "AI automation agency",
+    "digital product studio",
+    "UI UX studio"
+  ],
   authors: [{ name: "Izzy Digital Studio" }],
   creator: "Izzy Digital Studio",
-  metadataBase: new URL("https://izzystudios.com"),
+  metadataBase: new URL("https://izzy-studios.vercel.app"),
+  alternates: {
+    canonical: "https://izzy-studios.vercel.app",
+  },
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://izzydigitalstudio.com",
-    title: "Izzy Digital Studio | Premium Web & AI Automation Agency",
+    url: "https://izzy-studios.vercel.app",
+    title: "Izzy Digital Studio | Web Design, AI Automation & SaaS Development Agency",
     description:
-      "We design systems that help businesses attract customers, automate operations, and grow revenue.",
+      "Premium web design, AI systems, automation, and SaaS development agency serving Lagos and global clients.",
     siteName: "Izzy Digital Studio",
     images: [
       {
-        url: "/og-image.jpg", // Ensure this image exists or is planned
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Izzy Digital Studio",
@@ -39,8 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Izzy Digital Studio | Premium Digital Systems",
-    description: "Building world-class websites and AI automation workflows in Lagos, Nigeria.",
+    title: "Izzy Digital Studio | Web Design, AI Automation & SaaS Development Agency",
+    description:
+      "Premium web design, AI systems, automation, and SaaS development agency serving Lagos and global clients.",
     images: ["/og-image.jpg"],
     creator: "@izzystudios526",
   },
@@ -60,6 +75,26 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Izzy Digital Studio",
+  url: "https://izzy-studios.vercel.app",
+  description: "Web design, AI systems, SaaS development and automation studio.",
+  areaServed: "Worldwide",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lagos",
+    addressCountry: "NG",
+  },
+  serviceType: [
+    "Web Design",
+    "AI Automation",
+    "SaaS Development",
+    "UI/UX Design",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +103,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="min-h-screen font-body bg-background text-text selection:bg-primary/30 overflow-x-hidden antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
         <div className="relative flex min-h-screen flex-col overflow-hidden">
           {children}
         </div>
@@ -76,3 +117,4 @@ export default function RootLayout({
     </html>
   );
 }
+

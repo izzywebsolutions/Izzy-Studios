@@ -11,7 +11,7 @@ export function FinalCta() {
             Need a website, automation, or AI system?
           </h2>
           <p className="mt-3 max-w-2xl text-muted">
-            Send the project details and Izzy Studios will help shape the
+            Send the project details and Izzy Digital Studio will help shape the
             fastest practical path to launch.
           </p>
         </div>

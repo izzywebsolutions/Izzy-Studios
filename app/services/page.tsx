@@ -203,7 +203,7 @@ export default function ServicesPage() {
       </section>
 
       <ServiceSection
-        title="Quick Start Services"
+        title="Web Design & Custom Websites"
         description="Clear deliverables for businesses that need a stronger digital presence fast."
         services={quickStartServices}
       />
@@ -211,7 +211,7 @@ export default function ServicesPage() {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
       
       <ServiceSection
-        title="Advanced Systems"
+        title="SaaS & Custom Application Development"
         description="Custom software for teams and founders that need scalable digital infrastructure."
         services={advancedSystems}
       />
@@ -219,7 +219,7 @@ export default function ServicesPage() {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
       
       <ServiceSection
-        title="AI & Automation"
+        title="AI Integration & Workflow Automation"
         description="Practical AI and automation built around real operations, not hype."
         services={automationServices}
       />

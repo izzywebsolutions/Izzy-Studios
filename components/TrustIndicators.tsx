@@ -12,8 +12,11 @@ const stats = [
 
 export function TrustIndicators() {
   return (
-    <section className="relative z-10 border-b border-border/50 bg-background/50 backdrop-blur-xl px-4 py-12 sm:px-6">
+    <section className="relative z-10 border-b border-border/50 bg-background/50 backdrop-blur-xl px-4 py-16 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
+        <h2 className="font-display text-center text-3xl font-bold text-white sm:text-4xl mb-12">
+          Why Choose Us
+        </h2>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
           {stats.map((stat, i) => (
             <motion.div

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://izzystudios.com/sitemap.xml',
+    sitemap: 'https://izzy-studios.vercel.app/sitemap.xml',
   };
 }

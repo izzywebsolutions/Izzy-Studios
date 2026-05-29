@@ -20,10 +20,10 @@ export function Footer() {
         <div className="flex-1">
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80 w-fit">
             <div className="relative h-10 w-10 overflow-hidden rounded-lg bg-surface/50 border border-border/50 p-1.5 flex items-center justify-center shadow-glass">
-              <Image src="/logo.png" alt="Izzy Studios Logo" width={32} height={32} className="object-contain" />
+              <Image src="/logo.png" alt="Izzy Digital Studio Logo" width={32} height={32} className="object-contain" />
             </div>
             <p className="font-display text-xl font-bold tracking-tight text-white drop-shadow-md">
-              Izzy Studios
+              Izzy Digital Studio
             </p>
           </Link>
           <p className="mt-6 max-w-xs text-base leading-relaxed text-muted/90 font-medium">
@@ -62,7 +62,7 @@ export function Footer() {
       
       <div className="mx-auto mt-16 max-w-6xl border-t border-border/30 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
         <p className="text-xs font-medium tracking-wide text-muted">
-          Copyright © {new Date().getFullYear()} Izzy Studios. All rights reserved.
+          Copyright © {new Date().getFullYear()} Izzy Digital Studio. All rights reserved.
         </p>
         <p className="text-xs font-medium tracking-wide text-muted flex items-center gap-1">
           Designed with <span className="text-primary">precision</span>
