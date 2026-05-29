@@ -11,35 +11,35 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Izzy Studios | Premium Web & AI Automation Agency in Nigeria",
-    template: "%s | Izzy Studios",
+    default: "Izzy Digital Studio | Premium Web & AI Automation Agency in Nigeria",
+    template: "%s | Izzy Digital Studio",
   },
   description:
-    "Izzy Studios is a world-class digital systems studio based in Lagos, Nigeria. We build high-performance SaaS platforms, business websites, and AI automation workflows.",
-  keywords: ["web design Nigeria", "AI agency Nigeria", "automation agency Lagos", "web development Lagos", "SaaS development Nigeria", "digital systems studio", "Izzy Studios", "Izzy Web Solutions"],
-  authors: [{ name: "Izzy Studios" }],
-  creator: "Izzy Studios",
+    "Izzy Digital Studio is a world-class digital systems studio based in Lagos, Nigeria. We build high-performance SaaS platforms, business websites, and AI automation workflows.",
+  keywords: ["web design Nigeria", "AI agency Nigeria", "automation agency Lagos", "web development Lagos", "SaaS development Nigeria", "digital systems studio", "Izzy Digital Studio", "Izzy Web Solutions"],
+  authors: [{ name: "Izzy Digital Studio" }],
+  creator: "Izzy Digital Studio",
   metadataBase: new URL("https://izzystudios.com"),
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://izzystudios.com",
-    title: "Izzy Studios | Premium Web & AI Automation Agency",
+    url: "https://izzydigitalstudio.com",
+    title: "Izzy Digital Studio | Premium Web & AI Automation Agency",
     description:
       "We design systems that help businesses attract customers, automate operations, and grow revenue.",
-    siteName: "Izzy Studios",
+    siteName: "Izzy Digital Studio",
     images: [
       {
         url: "/og-image.jpg", // Ensure this image exists or is planned
         width: 1200,
         height: 630,
-        alt: "Izzy Studios",
+        alt: "Izzy Digital Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Izzy Studios | Premium Digital Systems",
+    title: "Izzy Digital Studio | Premium Digital Systems",
     description: "Building world-class websites and AI automation workflows in Lagos, Nigeria.",
     images: ["/og-image.jpg"],
     creator: "@izzystudios526",
