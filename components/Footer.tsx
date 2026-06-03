@@ -7,7 +7,7 @@ const socialLinks = [
   { label: "TikTok", href: "https://www.tiktok.com/@izzystudios526?_r=1&_t=ZS-96Nj40UJlhP" },
   { label: "Instagram", href: "https://www.instagram.com/izzystudios526?igsh=MjlydGxkemdrd2ky" },
   { label: "X", href: "https://x.com/izzystudios526" },
-  { label: "WhatsApp", href: "https://wa.me/message/GFH26N2VQAKNG1" },
+  { label: "WhatsApp", href: "https://wa.me/2349015116345?text=Hello%20Izzy%20Digital%20Studio%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project." },
 ] as const;
 
 export function Footer() {

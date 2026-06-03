@@ -6,12 +6,13 @@ import { usePathname } from "next/navigation";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/work", label: "Work" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export function Navbar() {
@@ -19,6 +20,7 @@ export function Navbar() {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +34,29 @@ export function Navbar() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
+
+  // Close mobile menu on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (
+        isMobileMenuOpen &&
+        navRef.current &&
+        !navRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -55,7 +80,7 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="fixed inset-x-0 top-0 z-50 py-3 sm:py-4 px-4 sm:px-6 pointer-events-none"
     >
-      <div className="mx-auto max-w-6xl pointer-events-auto relative">
+      <div ref={navRef} className="mx-auto max-w-6xl pointer-events-auto relative">
         <motion.div
           className={cn(
             "relative flex h-14 sm:h-16 items-center justify-between gap-4 sm:gap-6 rounded-2xl px-4 sm:px-6",
@@ -75,7 +100,7 @@ export function Navbar() {
             <span className="hidden sm:inline-block">IZZY DIGITAL STUDIO</span>
             <span className="sm:hidden text-sm">IZZY DIGITAL</span>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center justify-center gap-8">
             {links.map((link) => {

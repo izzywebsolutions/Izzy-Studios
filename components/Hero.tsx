@@ -120,7 +120,9 @@ function Hero({ videos = [] }: HeroProps) {
           </Link>
 
           <a
-            href="https://wa.me/message/GFH26N2VQAKNG1"
+            href="https://wa.me/2349015116345?text=Hello%20Izzy%20Digital%20Studio%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/40 bg-surface/60 px-8 py-3.5 text-sm font-semibold text-text transition-colors hover:border-primary"
           >
             <MessageCircle className="h-4 w-4 text-primary" aria-hidden />

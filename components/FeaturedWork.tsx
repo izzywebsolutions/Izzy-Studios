@@ -38,7 +38,7 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://oss-multimedia.vercel.app/",
     slug: "/work/oss-multimedia",
-    image: "/WORKS/oss.png",
+    image: "/works/oss.png",
   },
   {
     name: "Legend Beauty Store",
@@ -48,7 +48,7 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://legend-beauty-store.vercel.app/",
     slug: "/work/legend-beauty",
-    image: "/WORKS/legend.png",
+    image: "/works/legend.png",
   },
   {
     name: "Green Minds",
@@ -58,7 +58,7 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://green-minds-theta.vercel.app/",
     slug: "/work/green-minds",
-    image: "/WORKS/green.png",
+    image: "/works/green.png",
   },
   {
     name: "Fiyin's Closet & Events",
@@ -68,7 +68,7 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     href: "https://fiyins-closet-site.vercel.app/",
     slug: "/work/fiyin-closet",
-    image: "/WORKS/fiyin.png",
+    image: "/works/fiyin.png",
   },
 ] as const;
 

@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <main className="bg-background relative min-h-screen selection:bg-primary/30">
       <Navbar />
-      
+
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 bg-grid opacity-[0.03] pointer-events-none" />
       <div className="absolute top-0 right-0 w-[800px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none opacity-40" />
@@ -42,7 +42,9 @@ export default function ContactPage() {
 
             <div className="mt-12 space-y-4">
               <a
-                href="https://wa.me/message/GFH26N2VQAKNG1"
+                href="https://wa.me/2349015116345?text=Hello%20Izzy%20Digital%20Studio%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-start gap-5 rounded-2xl border border-primary/40 bg-surface/60 p-6 text-text transition-all duration-300 hover:border-primary hover:bg-surface/80 hover:shadow-glow hover:-translate-y-1 backdrop-blur-md"
               >
                 <div className="rounded-xl bg-primary/20 p-3 text-primary transition-colors group-hover:bg-primary group-hover:text-white group-hover:shadow-glow">
@@ -55,7 +57,7 @@ export default function ContactPage() {
                   </span>
                 </div>
               </a>
-              
+
               <a
                 href="mailto:izzywebsolutions26@gmail.com"
                 className="group flex items-start gap-5 rounded-2xl border border-border/50 bg-surface/40 p-6 text-text transition-all duration-300 hover:border-primary/40 hover:bg-surface/60 hover:-translate-y-1 backdrop-blur-md"
@@ -72,7 +74,7 @@ export default function ContactPage() {
                   </span>
                 </div>
               </a>
-              
+
               <div className="group flex items-start gap-5 rounded-2xl border border-border/50 bg-surface/40 p-6 text-text backdrop-blur-md transition-all duration-300 hover:bg-surface/60">
                 <div className="rounded-xl bg-background/50 p-3 text-muted border border-border/50">
                   <MapPin className="h-6 w-6" aria-hidden />
@@ -98,7 +100,7 @@ export default function ContactPage() {
           >
             {/* Form Glow Effect */}
             <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-tr from-primary/20 via-accent-glow/10 to-transparent opacity-50 blur-2xl pointer-events-none" />
-            
+
             <div className="relative rounded-[2rem] border border-border/50 bg-surface/40 p-8 sm:p-12 backdrop-blur-xl shadow-2xl">
               <h2 className="font-display text-2xl font-bold text-white mb-8">
                 Send us a message
@@ -108,7 +110,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-      
+
       <div className="relative z-10">
         <Footer />
       </div>

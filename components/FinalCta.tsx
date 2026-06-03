@@ -24,7 +24,9 @@ export function FinalCta() {
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
           <a
-            href="https://wa.me/message/GFH26N2VQAKNG1"
+            href="https://wa.me/2349015116345?text=Hello%20Izzy%20Digital%20Studio%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-semibold text-text transition-colors hover:border-primary/40 hover:bg-surface/50"
           >
             <MessageCircle className="h-4 w-4 text-primary" aria-hidden />

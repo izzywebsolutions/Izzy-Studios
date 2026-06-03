@@ -11,7 +11,7 @@ export function PremiumCta() {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid opacity-[0.05] pointer-events-none" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
-      
+
       <div className="mx-auto max-w-5xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -26,7 +26,7 @@ export function PremiumCta() {
         >
           {/* Internal Glow */}
           <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-50" />
-          
+
           <div className="relative z-10">
             <p className="text-sm font-bold tracking-widest uppercase text-primary mb-4">Start Now</p>
             <h2 className="font-display text-4xl font-extrabold leading-tight text-white sm:text-6xl drop-shadow-md">
@@ -35,7 +35,7 @@ export function PremiumCta() {
             <p className="mt-6 max-w-2xl mx-auto text-xl text-muted/90 font-medium">
               Send your project details and Izzy Digital Studio will help shape the fastest practical path to launch.
             </p>
-            
+
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
@@ -51,9 +51,11 @@ export function PremiumCta() {
                 </span>
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary via-accent-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
-              
+
               <a
-                href="https://wa.me/message/GFH26N2VQAKNG1"
+                href="https://wa.me/2349015116345?text=Hello%20Izzy%20Digital%20Studio%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(
                   "group inline-flex items-center justify-center gap-2 rounded-xl",
                   "border border-primary/30 bg-surface/40 px-8 py-4 text-sm font-bold text-text backdrop-blur-md",
