@@ -4,6 +4,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, Mail, Send, X, CheckCircle2, ArrowRight } from "lucide-react";
+import { config } from "@/src/config";
 
 const projectTypes = [
   "Landing Page",
@@ -62,7 +63,7 @@ export function ContactForm() {
   };
 
   const generateWhatsAppLink = () => {
-    const text = `Hello Izzy Digital Studio,
+    const text = `Hello ${config.brand.name},
 
 My name is ${formData.name}.
 
@@ -77,7 +78,7 @@ ${formData.message}
 
 I would like to discuss this project.`;
 
-    return `https://wa.me/2349015116345?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/${config.contact.whatsapp.number}?text=${encodeURIComponent(text)}`;
   };
 
   const generateMailtoLink = () => {
@@ -90,7 +91,7 @@ Budget Range: ${formData.budget}
 Message:
 ${formData.message}`;
 
-    return `mailto:izzywebsolutions26@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return `mailto:${config.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const handleSend = (type: "whatsapp" | "email" | "both") => {

@@ -1,6 +1,7 @@
 import { Globe, Workflow, Brain, Smartphone } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { config } from "@/src/config";
 
 const services = [
   {
@@ -40,7 +41,7 @@ export function ServicesPreview() {
           Systems for modern businesses
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted">
-          Izzy Digital Studio helps businesses look more credible, automate operations,
+          {config.brand.name} helps businesses look more credible, automate operations,
           and prepare for the AI era.
         </p>
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

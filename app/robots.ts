@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { config } from '@/src/config';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://izzy-studios.vercel.app/sitemap.xml',
+    sitemap: `${config.website.url}/sitemap.xml`,
   };
 }

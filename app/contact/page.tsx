@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { config } from "@/src/config";
 
 export default function ContactPage() {
   return (
@@ -42,7 +43,7 @@ export default function ContactPage() {
 
             <div className="mt-12 space-y-4">
               <a
-                href="https://wa.me/2349015116345?text=Hello%20Izzy%20Digital%20Studio%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                href={`https://wa.me/${config.contact.whatsapp.number}?text=${encodeURIComponent(config.contact.whatsapp.prefilledMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-start gap-5 rounded-2xl border border-primary/40 bg-surface/60 p-6 text-text transition-all duration-300 hover:border-primary hover:bg-surface/80 hover:shadow-glow hover:-translate-y-1 backdrop-blur-md"
@@ -59,7 +60,7 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="mailto:izzywebsolutions26@gmail.com"
+                href={`mailto:${config.contact.email}`}
                 className="group flex items-start gap-5 rounded-2xl border border-border/50 bg-surface/40 p-6 text-text transition-all duration-300 hover:border-primary/40 hover:bg-surface/60 hover:-translate-y-1 backdrop-blur-md"
               >
                 <div className="rounded-xl bg-background/50 p-3 text-muted transition-colors group-hover:bg-primary/20 group-hover:text-primary border border-border/50">
@@ -67,7 +68,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <span className="block text-lg font-bold text-white mb-1">
-                    izzywebsolutions26@gmail.com
+                    {config.contact.email}
                   </span>
                   <span className="block text-sm text-muted group-hover:text-text transition-colors">
                     For RFPs, detailed briefs, and general inquiries. Average response: 24h.
@@ -81,7 +82,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <span className="block text-lg font-bold text-white mb-1">
-                    Lagos, Nigeria
+                    {config.contact.address}
                   </span>
                   <span className="block text-sm text-muted">
                     Operating globally. We build for clients across North America, Europe, and Africa.

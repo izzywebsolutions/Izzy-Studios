@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
+import { config } from '@/src/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://izzy-studios.vercel.app';
+  const baseUrl = config.website.url;
   
   return [
     {

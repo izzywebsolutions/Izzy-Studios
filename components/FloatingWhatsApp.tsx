@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
+import { config } from "@/src/config";
 
 export function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -13,10 +14,8 @@ export function FloatingWhatsApp() {
     setIsMounted(true);
   }, []);
 
-  const prefilledMessage = encodeURIComponent(
-    "Hello Izzy Digital Studio,\n\nI found your website and would like to discuss a project."
-  );
-  const whatsappUrl = `https://wa.me/2349015116345?text=${prefilledMessage}`;
+  const prefilledMessage = encodeURIComponent(config.contact.whatsapp.prefilledMessage);
+  const whatsappUrl = `https://wa.me/${config.contact.whatsapp.number}?text=${prefilledMessage}`;
 
   if (!isMounted) return null;
 

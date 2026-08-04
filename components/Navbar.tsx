@@ -7,6 +7,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState, useEffect, useRef } from "react";
+import { config } from "@/src/config";
 
 const links = [
   { href: "/", label: "Home" },
@@ -95,9 +96,9 @@ export function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <div className="relative h-8 w-8 overflow-hidden rounded-md bg-surface border border-border/50 p-1 flex items-center justify-center group-hover:border-primary/50 transition-colors">
-              <Image src="/logo.png" alt="Izzy Digital Studio Logo" width={24} height={24} className="object-contain" />
+              <Image src={config.brand.logoPath} alt={`${config.brand.name} Logo`} width={24} height={24} className="object-contain" />
             </div>
-            <span className="hidden sm:inline-block">IZZY DIGITAL STUDIO</span>
+            <span className="hidden sm:inline-block">{config.brand.name.toUpperCase()}</span>
             <span className="sm:hidden text-sm">IZZY DIGITAL</span>
           </Link>
 

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { config } from "@/src/config";
 
 type HeroProps = {
   videos?: string[];
@@ -79,7 +80,7 @@ function Hero({ videos = [] }: HeroProps) {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="mx-auto mb-5 w-fit rounded-lg border border-muted/20 bg-surface/70 px-4 py-2 text-xs font-semibold uppercase text-primary"
         >
-          Modern digital systems studio
+          {config.brand.name}
         </motion.p>
 
         <motion.h1
@@ -88,53 +89,45 @@ function Hero({ videos = [] }: HeroProps) {
           transition={{ duration: 0.4, delay: 0.05, ease: "easeOut" }}
           className="font-display text-4xl font-bold leading-tight text-text sm:text-5xl md:text-6xl"
         >
-          Your Business Deserves a{" "}
+          {config.brand.tagline.split("Digital System")[0]}
           <span className="bg-gradient-to-r from-primary to-accent-glow bg-clip-text text-transparent">
             Digital System
-          </span>{" "}
-          That Works
+          </span>
+          {config.brand.tagline.split("Digital System")[1]}
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
-          className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl"
+          className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
         >
-          We build websites, automation, AI systems, and scalable digital
-          products for businesses worldwide.
+          {config.brand.mission}
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.15, ease: "easeOut" }}
-          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"
         >
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-primary px-8 py-3.5 text-sm font-bold text-white transition-all hover:opacity-90 active:scale-[0.98] shadow-glow"
           >
-            Start a Project
-            <ArrowRight className="h-4 w-4" aria-hidden />
+            <span className="relative z-10">Start Your Project</span>
+            <ArrowRight className="relative z-10 ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
 
           <a
-            href="https://wa.me/2349015116345?text=Hello%20Izzy%20Digital%20Studio%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+            href={`https://wa.me/${config.contact.whatsapp.number}?text=${encodeURIComponent(config.contact.whatsapp.prefilledMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/40 bg-surface/60 px-8 py-3.5 text-sm font-semibold text-text transition-colors hover:border-primary"
           >
-            <MessageCircle className="h-4 w-4 text-primary" aria-hidden />
-            WhatsApp
+            <MessageCircle className="h-4 w-4" />
+            Chat with Us
           </a>
-
-          <Link
-            href="/work"
-            className="inline-flex items-center justify-center rounded-lg border border-muted/30 bg-surface/60 px-8 py-3.5 text-sm font-semibold text-text transition-colors hover:border-primary/40"
-          >
-            View Work
-          </Link>
         </motion.div>
       </div>
     </section>

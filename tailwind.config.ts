@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { config as businessConfig } from "./src/config";
 
 const config: Config = {
   content: [
@@ -9,15 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#080C10",
-        surface: "#0D1117",
-        primary: "#4F8EF7",
-        secondary: "#7AA2FF",
-        text: "#F0F4FF",
-        muted: "#8892AA",
-        border: "#1B2430",
-        "surface-alt": "#11161F",
-        "accent-glow": "#00D4FF"
+        background: businessConfig.theme.colors.background,
+        surface: businessConfig.theme.colors.surface,
+        primary: businessConfig.theme.colors.primary,
+        secondary: businessConfig.theme.colors.secondary,
+        text: businessConfig.theme.colors.text,
+        muted: businessConfig.theme.colors.muted,
+        border: businessConfig.theme.colors.border,
+        "surface-alt": businessConfig.theme.colors.surfaceAlt,
+        "accent-glow": businessConfig.theme.colors.accentGlow
       },
       fontFamily: {
         display: ["Syne", "Inter", "system-ui", "sans-serif"],
