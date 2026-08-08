@@ -15,7 +15,7 @@ export const config = {
     faviconPath: "/favicon.ico",
   },
   website: {
-    url: "https://izzy-studios.vercel.app",
+    url: "https://izzydigitalstudio.com",
   },
   contact: {
     email: "izzywebsolutions26@gmail.com",
