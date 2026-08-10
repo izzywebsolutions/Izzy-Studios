@@ -27,7 +27,7 @@ export const config = {
     address: "Lagos, Nigeria",
   },
   social: {
-    instagram: "https://www.instagram.com/izzystudios526?igsh=MjlydGxkemdrd2ky",
+    instagram: "https://www.instagram.com/izzydigitalstudio?igsh=MjlydGxkemdrd2ky",
     tiktok: "https://www.tiktok.com/@izzystudios526?_r=1&_t=ZS-96Nj40UJlhP",
     x: "https://x.com/izzystudios526",
     threads: "",
