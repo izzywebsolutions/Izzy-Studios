@@ -29,7 +29,7 @@ export const config = {
   social: {
     instagram: "https://www.instagram.com/izzydigitalstudio?igsh=MjlydGxkemdrd2ky",
     tiktok: "https://www.tiktok.com/@izzystudios526?_r=1&_t=ZS-96Nj40UJlhP",
-    x: "https://x.com/izzystudios526",
+    x: "https://x.com/izzydigitalst",
     threads: "",
     linkedin: "",
     github: "",
